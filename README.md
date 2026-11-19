@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/banner.png" alt="Keep 100%. Get paying customers in 30 days with Claude." width="100%"></p>
+
 # Keep100
 
 **Keep 100% of your company. Get paying customers in 30 days with Claude.**
@@ -17,6 +19,8 @@ That made sense when research, positioning, copywriting, outreach and content ea
 Keep100 is that 30 days, set up for you inside Claude.
 
 ## What you get
+
+<p align="center"><img src="assets/before-after.png" alt="Claude out of the box: scattered chats and guesses. Claude with Keep100: one organized company folder." width="100%"></p>
 
 **1. Claude, set up properly.** Most people use Claude as a blank chat box. Every chat starts from zero, Claude guesses about your product, and it confidently makes things up. Keep100 builds you a workspace where Claude always has the right facts about your company, knows which facts you have confirmed, says "I don't know" instead of inventing, and saves every piece of work so nothing is lost between chats.
 
@@ -67,6 +71,8 @@ You'll need about an hour, your website address, and anything you've already wri
 
 Keep100 creates one folder that becomes the home for all your growth work:
 
+<p align="center"><img src="assets/workspace.png" alt="Every area of work reads from one company folder, guided by the house rules in CLAUDE.md." width="100%"></p>
+
 ```
 Keep100/
 ├── CLAUDE.md          House rules Claude follows every time
@@ -94,6 +100,8 @@ Three rules make this work:
 - **Your files are yours.** Kit updates never change your workspace without asking you first.
 
 ## The 30-day plan
+
+<p align="center"><img src="assets/30-day-plan.png" alt="Day 1 set up, days 2 to 3 positioning, days 4 to 5 pricing and landing page, days 6 to 30 get customers, day 30 paying customers." width="100%"></p>
 
 | Days | What happens |
 |---|---|
