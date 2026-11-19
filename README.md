@@ -99,7 +99,7 @@ Three rules make this work:
 |---|---|
 | Day 1 | Setup, brand, homepage headline (first session) |
 | Days 2 to 3 | Competitor research and positioning: who it's for and why you win |
-| Days 4 to 5 | Pricing and your landing page |
+| Days 4 to 5 | Pricing, then your landing page: the words first, then the designed page |
 | Days 6 to 30 | Getting customers, every day. **B2B:** finding prospects and cold email. **B2C:** posts and short videos where your customers spend time. Both: emails that turn signups into payers. |
 | Days 24 to 30 | Start the slow-burn channels: blog posts, keywords, showing up in AI search |
 
@@ -118,6 +118,7 @@ You don't need to remember any of this. Ask Claude *"what's today?"* and it chec
 | Positioning | Who your product is for, why you win, and what to say |
 | Pricing | A first price and plan structure you can defend |
 | Landing page | Full homepage copy, scored against a 20-point checklist |
+| Landing page design | Turns the copy into a designed, working page, using the UI/UX Pro Max design database |
 | Cold email | B2B outreach that gets replies instead of deletes |
 | Social content | B2C posts and short-video scripts built from your customers' own words |
 | Product emails | Welcome, activation and upgrade emails that turn signups into payers |

@@ -23,7 +23,7 @@ Reference files, each read at the step that names it: [variables.md](variables.m
 4. **Score** all 20 checks in `rubric.md`. A failure sends that section back to step 3. Then run `keep100:writing-check`.
 5. **Deliver** in the output shape below, save to `marketing/<date>-landing-page.md`, log it in `progress.md`.
 
-If the founder wants the page built, not just written: copy first, their approval second, then build.
+Once the founder approves the copy, propose `keep100:landing-page-design` to design and build the actual page.
 
 ## Page sections
 

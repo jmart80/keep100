@@ -10,7 +10,7 @@ Days are a guide. Order matters more than dates.
 | 2 | Competitor research | competitor-research | ~30 min |
 | 3 | Positioning: who it's for, why you win, what to say | positioning | ~1 hour |
 | 4 | Pricing | pricing | ~30 min |
-| 5 | Landing page copy | landing-page | ~1 hour |
+| 5 | Landing page copy, then the designed page | landing-page, landing-page-design | ~2 hours |
 | 6 | Welcome and activation emails (if they have signups or a trial) | product-emails | ~30 min |
 
 ## B2B track: days 6 to 30
