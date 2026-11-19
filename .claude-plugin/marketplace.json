@@ -1,0 +1,15 @@
+{
+  "name": "keep100",
+  "owner": { "name": "jmart80", "url": "https://github.com/jmart80" },
+  "metadata": {
+    "description": "Keep100: the solo SaaS founder kit for Claude."
+  },
+  "plugins": [
+    {
+      "name": "keep100",
+      "source": "./",
+      "description": "Sets Claude up properly for a solo SaaS founder and walks them to paying customers in 30 days, without investors.",
+      "version": "1.0.0"
+    }
+  ]
+}
