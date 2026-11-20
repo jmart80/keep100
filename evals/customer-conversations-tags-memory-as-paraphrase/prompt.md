@@ -1,5 +1,5 @@
 ---
-tags: [b2b, customer-conversations]
+tags: [guard, b2b, customer-conversations]
 runs: 1
 max_turns: 10
 timeout_seconds: 420

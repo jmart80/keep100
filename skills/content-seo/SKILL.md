@@ -1,6 +1,6 @@
 ---
 name: content-seo
-description: Blog posts, keyword research and showing up in AI answers for a Keep100 founder. Starts near the end of the plan and continues after it, because search traffic builds slowly. Use when the founder asks for a blog post, SEO, keywords, how to rank on Google, a comparison or alternative page, or how to appear in ChatGPT, Claude or Perplexity answers.
+description: Blog posts, keyword research and showing up in AI answers for a Keep100 founder. Starts near the end of the plan and continues after it, because search traffic builds slowly. Use when the founder asks for a blog post, SEO, keywords, how to rank on Google, a comparison or alternative page, or how to appear in ChatGPT, Claude or Perplexity answers. Also use for any question about whether to start a blog, content marketing, organic or search traffic, or getting found on Google, even when it is a yes or no question, because the honest answer depends on where the founder is in the plan.
 ---
 
 # Content and SEO

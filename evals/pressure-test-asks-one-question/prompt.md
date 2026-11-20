@@ -1,5 +1,5 @@
 ---
-tags: [b2c, pressure-test]
+tags: [job, b2c, pressure-test]
 runs: 1
 max_turns: 8
 timeout_seconds: 420

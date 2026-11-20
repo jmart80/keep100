@@ -1,5 +1,5 @@
 ---
-tags: [b2b, landing-page]
+tags: [guard, b2b, landing-page]
 runs: 1
 max_turns: 14
 timeout_seconds: 420

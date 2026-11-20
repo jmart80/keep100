@@ -46,7 +46,7 @@ From the material only, draft `product.md`, `customers.md`, `pricing.md` and `br
 Rules:
 - Each fact goes in one file. Prices go in `pricing.md`, features in `product.md`. Put in `facts.md` only proof that has no other home (results, credentials, named customers, testimonials), marked `[unconfirmed]` with its source.
 - Quote customer language word for word, tagged as the template shows. If you did not see the exact words, tag it `[paraphrase]`.
-- Write "unknown" for anything the material doesn't say. Don't infer prices, user counts or results.
+- Write "unknown" for anything the material doesn't say. Don't infer prices, user counts or results. Silence is unknown, never "none": if the founder didn't mention discounts, a guarantee, a trial length or a competitor, write "unknown", not "no discounts".
 - For `brand.md`, describe the voice their existing writing actually has, with an example sentence from it.
 
 Tick "Company files drafted".
@@ -62,7 +62,7 @@ Interview only for what's missing, highest-value gaps first, at most about eight
 5. **How a customer would pay:** "If someone said yes today, how would they pay you?" Record the answer in `pricing.md`. If there is no way yet, say that the pricing step will set one up.
 6. **Time:** "How many hours a day can you give this?" Recommend an honest number. One focused hour is enough to run the plan.
 
-Fill the placeholders in `CLAUDE.md` and `progress.md`:
+Fill the placeholders in `CLAUDE.md` and `progress.md`. The daily email number is the kit's starting default, not something the founder said. When you report it, say so: "5 new emails a day to start, which you can change."
 - B2B: `{{TRACK_NOTE}}` = "Customers come from direct outreach first: finding the right people and writing to them. Social is optional (LinkedIn)." `{{DAILY_NEW_EMAILS}}` = 5 for up to an hour a day, 10 for two hours or more. Delete the "Getting customers (B2C)" section from `progress.md`.
 - B2C: `{{TRACK_NOTE}}` = "Customers come from social media and short video first. No cold email." `{{DAILY_NEW_EMAILS}}` = "not used". Delete the "Getting customers (B2B)" section from `progress.md`.
 

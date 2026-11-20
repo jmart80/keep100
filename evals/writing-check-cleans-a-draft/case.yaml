@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: writing-check-cleans-a-draft
+expected_outcome: |
+  Removes the banned words, the dash and the unconfirmed 200 clinics claim, saves the fixed post and says what changed.
+context:
+  scaffold_script: place-workspace.sh

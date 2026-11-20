@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: setup-builds-the-workspace
+expected_outcome: |
+  Creates the workspace with progress.md, the company files and the house rules, records only what Dana said, and asks her to confirm.

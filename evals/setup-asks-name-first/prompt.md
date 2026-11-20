@@ -1,5 +1,5 @@
 ---
-tags: [smoke, setup]
+tags: [job, smoke, setup]
 runs: 1
 max_turns: 6
 timeout_seconds: 420

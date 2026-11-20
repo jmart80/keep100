@@ -198,7 +198,9 @@ Two things are worth knowing. Claude reads those files to work with you, under y
 
 - `python3 scripts/validate.py` checks that every skill, template, example and eval case agrees with the others. It runs on every push.
 - `python3 -m unittest discover tests` tests the scripts the skills run: the prospect pipeline, the writing check, the dashboard and the audit.
-- [`evals/`](evals/README.md) holds 27 cases that run the skills against two [example workspaces](examples/README.md) and check Claude keeps the kit's promises.
+- [`evals/`](evals/README.md) holds 33 cases that run the skills against two [example workspaces](examples/README.md). 15 are jobs a founder asks for, and 18 are promises the kit must never break. These are real model runs, started by hand.
+
+In the [latest run](evals/RESULTS.md), the 15 jobs passed 45 of 45 runs with the skills and 8 of 45 without them, in the same workspace. The 18 promises passed 54 of 54 runs with the skills and 50 of 54 without them. Claude already keeps most of them when the company files mark what is confirmed, so those cases are there to catch a regression.
 
 ## Design docs
 

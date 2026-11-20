@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: prospect-list-says-who-is-due
+expected_outcome: |
+  Lena's second email is due, Ana is the one new first email, Joe has no address, and the list is nearly empty.
+context:
+  scaffold_script: place-workspace.sh

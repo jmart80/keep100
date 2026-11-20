@@ -1,5 +1,5 @@
 ---
-tags: [b2c, product-emails]
+tags: [guard, b2c, product-emails]
 runs: 1
 max_turns: 10
 timeout_seconds: 420

@@ -1,6 +1,6 @@
 schema_version: "1.1"
 name: weekly-brief-uses-the-files
 expected_outcome: |
-  A brief under 200 words built from the workspace: steps done, last week's numbers, three specific ideas.
+  A brief from the real state: 18 of 23 steps, first sales call next, last week's numbers, three ideas specific to Kneecap, saved to briefs/.
 context:
   scaffold_script: place-workspace.sh

@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: workspace-audit-finds-seeded-problems
+expected_outcome: |
+  Finds the stale file, the repeated price, the untagged quote and the unlogged draft, and asks before fixing.
+context:
+  scaffold_script: place-workspace.sh

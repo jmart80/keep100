@@ -1,5 +1,5 @@
 ---
-tags: [smoke, b2b, sales-replies]
+tags: [guard, smoke, b2b, sales-replies]
 runs: 1
 max_turns: 10
 timeout_seconds: 420

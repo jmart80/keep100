@@ -4,13 +4,27 @@ What changed in the kit, newest first. For the changes a founder's workspace nee
 
 ## 1.1.0 (2026-11-20)
 
+### Measured
+
+- All eval cases ran for the first time. Results are in `evals/RESULTS.md`: jobs pass 45 of 45 runs with the skills and 8 of 45 without them.
+- 33 eval cases, up from 27, split into jobs and guards. Job cases check the files and records a skill leaves behind, not only the reply.
+- `scripts/eval_scaffold.py` keeps the example workspaces "as of today" for every run. `scripts/eval_report.py` writes the results page.
+
+### Fixed after the first eval runs
+
+- `pressure-test` and `pricing` ask one question per message.
+- `setup` writes "unknown" for anything the founder did not say, never "none", and labels the daily email number as the kit's default.
+- `weekly-brief` counts steps the way the dashboard does.
+- `content-seo` and `offer` now load for the plain questions founders ask about blogs and scarcity lines.
+- The Evals workflow installs the sandbox tools it needs and uses a steadier judge.
+
 ### New
 
 - **Progress dashboard** (`dashboard`): a checklist page built from `progress.md` and rebuilt whenever a step is finished.
 - Seven skills: `customer-conversations`, `prospect-list`, `sales-replies`, `offer`, `launch`, `activation` and `workspace-audit`. The first six are adapted from Corey Haines' marketingskills (MIT).
 - `cold-email/SENDING.md`: sending setup, opt-outs and when to stop.
 - Scripts inside the skills: the pipeline checker and daily queue, the writing check, the dashboard builder and the workspace audit.
-- Validation on every push (`scripts/validate.py`, `tests/`), 27 eval cases (`evals/`), and two example workspaces (`examples/`).
+- Validation on every push (`scripts/validate.py`, `tests/`), eval cases (`evals/`), and two example workspaces (`examples/`).
 - The company model contract (`docs/contract.json`, and the table in `docs/CONTEXT.md`).
 
 ### Changed

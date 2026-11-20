@@ -1,5 +1,5 @@
 ---
-tags: [b2c, pricing]
+tags: [job, b2c, pricing]
 runs: 1
 max_turns: 8
 timeout_seconds: 420

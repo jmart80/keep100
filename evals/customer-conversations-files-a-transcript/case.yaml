@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: customer-conversations-files-a-transcript
+expected_outcome: |
+  Files the conversation, keeps her words exact, treats the compliment as no evidence and the booked demo as the commitment.
+context:
+  scaffold_script: place-workspace.sh

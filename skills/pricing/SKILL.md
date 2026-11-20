@@ -15,6 +15,8 @@ The recommendations below are starting defaults for a solo founder with no custo
 
 ## Steps, one question at a time, recommending an answer each time
 
+One question mark per message. Don't stack a second question behind the first ("and has any tester mentioned price?"). Ask it next time. Say what the files already show in two lines at most, ask the question, and give your recommended answer. When the files don't hold a number, such as a competitor's price, say so, say where the founder can read it in two minutes, and recommend what to do if they can't find it.
+
 1. **What they pay today for the alternative.** A tool, a freelancer, staff hours, or lost money from doing nothing. This anchors value, not your costs.
 2. **What the customer is buying.** The outcome, in their words. Price that, not features.
 3. **Model.** Recommend the simplest that fits:

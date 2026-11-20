@@ -1,5 +1,5 @@
 ---
-tags: [b2c, competitor-research]
+tags: [guard, b2c, competitor-research]
 runs: 1
 max_turns: 8
 timeout_seconds: 420

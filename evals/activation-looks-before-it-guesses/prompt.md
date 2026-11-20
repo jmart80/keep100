@@ -1,5 +1,5 @@
 ---
-tags: [b2b, activation]
+tags: [guard, b2b, activation]
 runs: 1
 max_turns: 10
 timeout_seconds: 420

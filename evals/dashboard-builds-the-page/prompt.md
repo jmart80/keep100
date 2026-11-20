@@ -1,5 +1,5 @@
 ---
-tags: [smoke, b2b, dashboard]
+tags: [job, smoke, b2b, dashboard]
 runs: 1
 max_turns: 12
 timeout_seconds: 420

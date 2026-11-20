@@ -1,6 +1,6 @@
 schema_version: "1.1"
 name: cold-email-follows-the-rules
 expected_outcome: |
-  A first cold email under 100 words that uses her real trigger, has no link and invents no proof.
+  A short first email to Ana built on her receptionist hire, with a lowercase subject, no link, no claims, and a way out.
 context:
   scaffold_script: place-workspace.sh

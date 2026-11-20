@@ -1,5 +1,5 @@
 ---
-tags: [smoke, weekly-brief]
+tags: [guard, smoke, weekly-brief]
 runs: 1
 max_turns: 6
 timeout_seconds: 420
