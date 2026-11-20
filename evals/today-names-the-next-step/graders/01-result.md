@@ -3,5 +3,5 @@ type: llm
 weight: 2
 ---
 
-PASS if the reply names one piece of work for today that fits the workspace: preparing for or booking the first sales call with Priya Nair, or today's outreach queue. It gives a short reason and asks whether to start. A short ordered plan for the day that leads with one of those and names what comes second still passes.
-FAIL if it recommends a step progress.md already shows as done (such as positioning, pricing or the landing page), or offers a menu of several options and leaves the choice to the founder.
+PASS if the reply says the current step is the first sales call and leads with Priya Nair: checking whether she picked a time, booking the call or preparing for it. Anything else it lists for today must come from the workspace, such as Lena Fischer's follow-up, Ana Costa's first email, the short prospect list or the week's numbers.
+FAIL if it recommends a step progress.md already shows as done (such as positioning, pricing or the landing page), leads with anything other than the sales call or Priya, or lists options without saying what to do first.
