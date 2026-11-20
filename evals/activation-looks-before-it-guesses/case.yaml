@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: activation-looks-before-it-guesses
+expected_outcome: |
+  Asks to walk the real signup path, or names the key action, instead of guessing or quoting benchmarks.
+context:
+  scaffold_script: place-workspace.sh

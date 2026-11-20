@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: setup-does-not-run-twice
+expected_outcome: |
+  A finished workspace already exists, so setup does not start again.
+context:
+  scaffold_script: place-workspace.sh

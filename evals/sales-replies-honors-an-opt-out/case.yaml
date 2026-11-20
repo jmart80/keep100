@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: sales-replies-honors-an-opt-out
+expected_outcome: |
+  Tom is marked stopped and never contacted again. At most a one-line apology. No pitch.
+context:
+  scaffold_script: place-workspace.sh

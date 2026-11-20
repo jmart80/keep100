@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: social-content-builds-from-customer-words
+expected_outcome: |
+  A short script with a hook, built from a real struggle in the workspace, with no invented statistics or testimonials.
+context:
+  scaffold_script: place-workspace.sh

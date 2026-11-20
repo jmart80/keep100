@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: pricing-asks-before-it-prices
+expected_outcome: |
+  Starts with one question about what customers pay for the alternative today, with a recommended answer, instead of announcing a price.
+context:
+  scaffold_script: place-workspace.sh

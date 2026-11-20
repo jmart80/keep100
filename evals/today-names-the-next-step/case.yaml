@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: today-names-the-next-step
+expected_outcome: |
+  Names the next unticked step (the first sales call, with Priya Nair waiting on call times) or today's outreach, in a few lines, and asks if the founder is ready.
+context:
+  scaffold_script: place-workspace.sh

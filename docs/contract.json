@@ -1,0 +1,43 @@
+{
+  "_about": "The company model contract. Every heading a skill reads must be listed here and must exist in the setup templates and the example workspaces. scripts/validate.py enforces it. The human-readable table is in docs/CONTEXT.md.",
+  "files": {
+    "company/product.md": {
+      "writer": ["setup", "activation", "landing-page-design"],
+      "headings": ["In one sentence", "What it does", "What it does not do", "How someone starts using it", "Signup or payment link", "Key action", "How the product sends email", "Where it is today", "Links"]
+    },
+    "company/customers.md": {
+      "writer": ["setup", "competitor-research", "customer-conversations"],
+      "headings": ["Who pays", "Ideal customer", "What they struggle with, in their own words", "What they use today instead", "Where they spend time", "What makes them hesitate"]
+    },
+    "company/positioning.md": {
+      "writer": ["positioning"],
+      "headings": ["Alternatives we beat", "What only we have", "Why that matters to the customer", "Category", "Category awareness", "Who to win first", "Champion", "Trigger events", "Job to be done", "Top objection", "Value props", "Headline candidates", "One-line positioning statement", "What to learn from the first customers"]
+    },
+    "company/pricing.md": {
+      "writer": ["pricing", "offer"],
+      "headings": ["Plans and prices", "Free trial or free plan", "How a customer pays", "Why these prices", "Discounts allowed", "Founding offer", "When to revisit"]
+    },
+    "company/brand.md": {
+      "writer": ["setup", "landing-page-design"],
+      "headings": ["Name and how to write it", "Voice", "Words we use", "Words we never use", "Words we allow", "Colors and fonts"]
+    },
+    "company/competitors.md": {
+      "writer": ["competitor-research"],
+      "headings": ["Alternatives", "Top pains", "Recommended opening", "Refuse to be", "Pricing pattern in the niche", "Open questions for real customers"]
+    },
+    "company/facts.md": {
+      "writer": ["the founder, through any skill"],
+      "headings": ["Results", "Customers and testimonials", "Company and founder"]
+    },
+    "progress.md": {
+      "writer": ["setup", "today", "every step skill"],
+      "headings": ["Setup", "Foundation", "Finish line", "Slow-burn channels", "Open loops", "Paying customers", "Weekly numbers", "Work log", "Declined"]
+    },
+    "learnings.md": {
+      "writer": ["prospect-list", "social-content", "launch", "customer-conversations", "sales-replies"],
+      "headings": ["Outreach and sales", "Posts and launches", "Pages and emails", "Customers"]
+    }
+  },
+  "progress_keys": ["Kit version", "Product", "Founder", "Track", "Started", "Hours a day", "Daily new emails", "Dashboard"],
+  "version_skills": ["setup", "today", "update-workspace"]
+}

@@ -1,50 +1,48 @@
 ---
 name: cold-email
-description: B2B outreach for Keep100 founders - building a list of the right prospects and writing cold email sequences that earn replies instead of pitching. Use on the B2B track from day 6, or when the founder wants to find prospects, write a cold email or follow-up sequence, improve reply rates, or audit an outreach email.
+description: Writes B2B cold emails for Keep100 founders that earn replies instead of pitching - the five-email sequence, each day's personalized sends, and the sending setup that keeps email out of spam. Use on the B2B track once a prospect list exists, or when the founder wants a cold email or follow-up sequence written, today's outreach drafted, an outreach email audited, or asks about deliverability, sending domains or why emails land in spam.
 ---
 
 # Cold email
 
-Adapted from the cold-email-sequence skill by Keep100's author. A cold email opens a conversation; it doesn't pitch, close or inform. Every rule serves **relevance**: the prospect's world first, the product second. A sequence is one story told across five emails, never the same pitch five times.
+Adapted from the cold-email-sequence skill by Keep100's author. A cold email opens a conversation. It doesn't pitch, close or inform. Every rule serves **relevance**: the prospect's world first, the product second. A sequence is one story told across five emails, never the same pitch five times.
+
+This skill writes. `keep100:prospect-list` decides who to write to and who is due today. `keep100:sales-replies` handles every reply.
 
 ## Inputs
 
-Everything comes from the company files; never assume anything about the product.
+Everything comes from the company files. Never assume anything about the product.
 
 | What the emails need | Where it comes from |
 |---|---|
-| What it is, what the prospect would call it | `company/product.md`, `company/positioning.md` (category) |
-| Who to write to | `company/positioning.md` (beachhead, champion), `company/customers.md` |
-| The problem, why now, cost of doing nothing | `company/customers.md` quotes, `company/positioning.md` |
-| A second angle for email 4 | A different pain, person or use case from `customers.md`. Must not be the same problem reworded |
-| Proof | `[confirmed]` facts only. None is fine: then no metric |
-| Credibility marker for email 3 | `[confirmed]` facts (founder background, certification, notable customer). Optional |
+| What it is, what the prospect would call it | `company/product.md`, `company/positioning.md` (Category) |
+| Who to write to, and why now | `sales/pipeline.csv` (each row's trigger), `company/positioning.md` (Who to win first, Champion) |
+| The problem and the cost of doing nothing | `company/customers.md` quotes, `company/positioning.md` |
+| A second angle for email 4 | A different pain, person or use case from `customers.md`. Not the same problem reworded |
+| Proof | `[confirmed]` entries in `company/facts.md` only. None is normal for a new founder |
 | No-cost offer for email 4 | Agree one with the founder: an audit, teardown, sample or setup help |
+| What has worked | `learnings.md` |
 | Sender name | The founder |
 
-If a needed input is missing, ask for it. Don't draft around a gap.
+If a needed input is missing, ask for it. Don't draft around a gap. If `sales/pipeline.csv` is empty, run `keep100:prospect-list` first.
 
-## Branch A: Build the prospect list (day 6)
+## Branch A: Sending setup (before the first send)
 
-1. Turn the beachhead into a search: role, company type, size, and a **trigger** (a real reason to write now: hiring for a role, a new launch, a funding round, a tool change, a post they wrote).
-2. Find 30 to 50 named people at named companies, with sources, using web search or Exa. Note one real trigger for each. No trigger, no email.
-3. Save to `sales/prospects.md` as a table: name, role, company, link, trigger, status.
-4. Finding emails: suggest they use the company website, LinkedIn, or an email-finder tool they trust. Don't guess addresses.
+Read [SENDING.md](SENDING.md) and walk the founder through it one step at a time. Record where most prospects are in `sales/CLAUDE.md`. Tick "Sending setup" in `progress.md`.
 
 ## Branch B: Write the sequence
 
-1. Read [BANNED.md](BANNED.md) before writing a word.
-2. Read [TEMPLATES.md](TEMPLATES.md) for the emails in scope.
-3. Draft. Each email personalized with `{first_name}` plus the prospect's trigger or company.
-4. Run the gate below on every email, then `keep100:writing-check`.
-5. Save to `sales/<date>-sequence.md`.
+1. Read [TEMPLATES.md](TEMPLATES.md) for the emails in scope.
+2. Draft. Use "I", never "we". The founder is one person and that is an advantage.
+3. Run the gate below on every email.
+4. Save to `sales/<date>-sequence.md`, with each email under a heading `## Email 1` to `## Email 5`. Tick "Email sequence written".
 
 | Email | Role | Day | Thread |
 |---|---|---|---|
 | 1 | Problem recognition | 0 | New |
 | 2 | Raise the stakes | 3 | Reply |
-| 3 | Social proof | 7 | Reply |
-| 4 | New angle + no-cost offer | 12 | New subject |
+| 3 | Proof, or what the founder is learning | 7 | Reply |
+| 4 | New angle and a no-cost offer | 12 | New subject |
 | 5 | Breakup | 19 | New subject |
 
 ## Rules for every email
@@ -53,19 +51,24 @@ If a needed input is missing, ask for it. Don't draft around a gap.
 - **Length:** 50 to 75 words, never over 100.
 - **Subject:** lowercase, 3 or 4 words, like an internal memo naming the problem, never the product. No question marks.
 - **Ask:** permission, not time. "Worth a quick chat?" Never a calendar link in the first email.
-- **Proof:** a confirmed metric in a phrase, or nothing.
-- No links, attachments or images in emails 1 to 3. Credibility marker in email 3 only. No-cost offer in email 4 only.
+- **Proof:** a confirmed fact in a phrase, or nothing.
+- **A way out** in email 1, in the founder's voice, as `SENDING.md` describes.
+- No links, attachments or images in emails 1 to 3. The no-cost offer appears in email 4 only.
 
-## Gate (every email, actually checked)
+## Gate, run on every email
 
-- Word count counted: under 75, never over 100
-- Banned list scanned term by term
-- `{first_name}` plus at least one real personal detail
+Run `keep100:writing-check` with `--format cold-email`. Its script counts the words, scans the banned list, and catches links and leftover placeholders. Add `--template` for the saved sequence, which keeps `{first_name}` as a merge field. Leave it off for emails about to be sent, where every placeholder must be filled. Then check by reading:
+
+- `{first_name}` plus one real detail from that person's row in `pipeline.csv`
 - Subject, ask, sign-off and thread placement match the rules
 - Every claim traces to a confirmed fact
 
-## Branch C: Daily sending (days 8 to 30)
+## Branch C: Daily sending
 
-Each day: list who's due a follow-up from `progress.md`, draft 10 new first emails from `sales/prospects.md`, and draft replies to any responses. The founder sends from their own email. Log every send and reply in `progress.md`. Weekly, look at which subject lines and angles got replies and adjust.
+1. Get today's list from `keep100:prospect-list` (its "Today's queue"): follow-ups due first, then new first emails up to `Daily new emails:` in `progress.md`.
+2. For each person, personalize the right email from the saved sequence with their trigger. One at a time. Identical bodies are what spam filters look for.
+3. Run the gate. The founder sends from their own mailbox.
+4. Write each send date into `sales/pipeline.csv` the same day. Tick "First emails sent" the first time.
+5. Hand any reply to `keep100:sales-replies`. A reply ends that person's sequence.
 
-When someone replies with interest, offer `keep100:pressure-test` to prepare the call.
+Every Friday, `keep100:prospect-list` reports which lane and trigger got replies. Change the list or the reason for writing before changing the wording. Rewrite one email at a time, so it's clear what made the difference, and note it in `learnings.md`.

@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: launch-runs-the-ready-check
+expected_outcome: |
+  Runs the ready check first and finds the gaps: no price, no way to pay, no landing page yet.
+context:
+  scaffold_script: place-workspace.sh

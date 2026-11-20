@@ -1,0 +1,86 @@
+# Keep100's one list of AI and marketing tells.
+# Read by scripts/check.py and by every writing skill through keep100:writing-check.
+# A founder allows a word for their field by listing it under "Words we allow" in company/brand.md.
+# One entry per line. Lines starting with # are comments.
+
+[words]
+# Flagged in every format. Common endings (s, ed, ing) are matched too.
+delve
+leverage
+utilize
+streamline
+seamless
+robust
+empower
+unlock
+elevate
+supercharge
+revolutionize
+transform
+transformative
+game-changer
+cutting-edge
+next-generation
+innovative
+groundbreaking
+world-class
+best-in-class
+holistic
+synergy
+journey
+landscape
+realm
+tapestry
+testament
+pivotal
+crucial
+vital
+comprehensive
+foster
+embark
+craft
+harness
+optimize
+scalable
+paradigm shift
+solution-oriented
+proactive
+forward-thinking
+actionable
+impactful
+resonates
+compelling
+facilitate
+
+[phrases]
+# Flagged in every format.
+in today's fast-paced world
+hope this finds you well
+i wanted to reach out
+i'm excited to share
+let's dive in
+in conclusion
+to the next level
+it's worth noting that
+as previously mentioned
+
+[review]
+# Sometimes fine. Reported as a warning so a person decides.
+navigate
+dive into
+whether you're
+it's not about
+not just
+
+[email]
+# Flagged only in emails.
+i'm following up on my previous email
+just checking in
+i'm reaching out
+furthermore
+moreover
+consequently
+accordingly
+nonetheless
+subsequently
+thus

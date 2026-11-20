@@ -1,0 +1,36 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Repo is consistent (skills, contract, versions, eval cases)
+        run: python3 scripts/validate.py
+      - name: Script tests
+        run: python3 -m unittest discover tests -v
+
+  plugin-format:
+    runs-on: ubuntu-latest
+    # Claude's own validator. Kept separate and allowed to fail, so a change
+    # in the CLI can't block a merge. Read its output when it goes red.
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+      - name: claude plugin validate
+        run: claude plugin validate .

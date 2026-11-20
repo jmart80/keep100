@@ -1,6 +1,6 @@
 ---
 name: landing-page
-description: Writes complete homepage or landing page copy for a Keep100 founder, hero through final call to action, from their company files, then scores it against a 20-point checklist. Works for B2B and B2C. Use on day 5 of the plan, or when the founder wants landing page or homepage copy, a new hero headline, or their existing page scored and fixed.
+description: Writes complete homepage or landing page copy for a Keep100 founder, hero through final call to action, from their company files, then scores it against a 20-point checklist. Works for B2B and B2C. Use at the landing page step of the plan, or when the founder wants landing page or homepage copy, a new hero headline, or their existing page scored and fixed.
 ---
 
 # Landing page
@@ -13,15 +13,17 @@ Reference files, each read at the step that names it: [variables.md](variables.m
 
 - **Full page** (default): steps 1 to 5.
 - **Hero only:** steps 1 and 2, draft the hero from `templates.md`, score checks 1 to 5 and 17 to 19.
+
+If `learnings.md` has lines about pages or launches, read them first.
 - **Score existing page:** read their live page (or pasted copy), run step 4 only, and give one fix per failing check.
 
 ## Steps
 
-1. **Map.** Read `variables.md`. Fill every variable from `company/positioning.md`, `customers.md`, `product.md`, `pricing.md` and `facts.md` (confirmed facts only). Use the fallback table for gaps. If the ideal customer or the job they're hiring the product for is missing, stop and suggest running positioning first.
+1. **Map.** Read `variables.md`. Fill every variable from the company file and heading it names, using confirmed facts only. Use the fallback table for gaps. If "Who to win first" or "Job to be done" in `company/positioning.md` is empty, stop and suggest running positioning first. If `company/product.md` has no signup or payment link, ask for it: every button on the page needs somewhere real to go.
 2. **Select** a headline archetype and CTA type from the tables below, naming the row that fired.
 3. **Draft** all six sections from `templates.md` only, respecting every word limit. Every pain raised in section 2 must be answered in section 3 or 4.
-4. **Score** all 20 checks in `rubric.md`. A failure sends that section back to step 3. Then run `keep100:writing-check`.
-5. **Deliver** in the output shape below, save to `marketing/<date>-landing-page.md`, log it in `progress.md`.
+4. **Score** all 20 checks in `rubric.md`. A failure sends that section back to step 3. Then run `keep100:writing-check` with `--format landing-page`, which counts the word limits and compares the two buttons, and show its claims table.
+5. **Deliver** in the output shape below, save to `marketing/<date>-landing-page.md`, tick "Landing page copy" in `progress.md`, add a Work log line and run `keep100:dashboard`.
 
 Once the founder approves the copy, propose `keep100:landing-page-design` to design and build the actual page.
 
@@ -48,7 +50,11 @@ Once the founder approves the copy, propose `keep100:landing-page-design` to des
 
 ## Decision rules
 
-Inputs: **category awareness** (do buyers search for this category by name: known, emerging, unknown), **market sophistication** (stage 1-2 new and few competitors, 3-4 established, 5 over-marketed), **product complexity** (low, medium, high), **situation** (replacing something, or creating a new behavior), **motion** (self-serve or sales-assisted).
+Inputs, and where each comes from:
+
+- **Category awareness** (known, emerging, unknown): "Category awareness" in `company/positioning.md`.
+- **Market sophistication** (stage 1-2 new with few competitors, 3-4 established, 5 over-marketed): count the direct competitors in `company/competitors.md` and read their headlines. Recommend a stage with the reason and confirm it in one question.
+- **Product complexity** (low, medium, high), **situation** (replacing something, or creating a new behavior) and **motion** (self-serve or sales-assisted): from `company/product.md` and `pricing.md`. Ask only if the files don't say.
 
 Headline archetype (formulas in `templates.md`):
 
@@ -79,18 +85,36 @@ CTA type:
 # Landing page: {product}
 Archetype: {id} (row that fired) | CTA: {type} | Track: {B2B|B2C}
 
-## 1. Hero        headline / subheadline / CTA + microcopy / visual note / trust line
-## 2. Problem     formula used + copy
-## 3. Solution    formula used + copy
-## 4. Value props "how it works" strip if high complexity; 4-6 blocks
-## 5. FAQ         lead answer as the header, then 5-6 questions, top objection first
-## 6. Final CTA   headline / reinforcing line / CTAs / microcopy
+## 1. Hero
+Headline: ...
+Subheadline: ...
+CTA: ...
+Microcopy: ...
+Visual: ...
+Trust line: ...
+## 2. Problem
+Formula: {name}
+{copy}
+## 3. Solution
+Formula: {name}
+{copy}
+## 4. Value props
+{"how it works" strip if high complexity, then 4-6 blocks}
+## 5. FAQ
+{lead answer as the header, then 5-6 questions, top objection first}
+## 6. Final CTA
+Headline: ...
+{reinforcing line}
+CTA: ...
+Microcopy: ...
 
 ## Checklist score (20 rows: check, pass/fail, one line of evidence)
 ```
 
+Keep the labels exactly as shown (`Headline:`, `Subheadline:`, `CTA:`, `Microcopy:`). The check script reads them.
+
 ## Hard rules
 
-- Never invent metrics, user counts, ratings, testimonials, customer names, faces or logos.
+- Never invent metrics, user counts, ratings, stars, testimonials, customer names, faces or logos.
 - No outcome without its mechanism in the same section.
-- No word from the banned list in `variables.md`.
+- No word from Keep100's banned list, which `keep100:writing-check` holds and checks.
