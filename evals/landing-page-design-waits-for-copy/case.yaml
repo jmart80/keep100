@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: landing-page-design-waits-for-copy
+expected_outcome: |
+  No approved copy exists, so it does not build a page. It offers to write the copy first.
+context:
+  scaffold_script: place-workspace.sh

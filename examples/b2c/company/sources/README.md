@@ -1,0 +1,1 @@
+Drop anything here that Claude should learn from: notes, pitch documents, FAQs, old posts, customer emails, call notes. Claude reads these to draft your company files, but never treats them as confirmed facts on their own.

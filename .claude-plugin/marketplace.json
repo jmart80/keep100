@@ -9,7 +9,7 @@
       "name": "keep100",
       "source": "./",
       "description": "Sets Claude up properly for a solo SaaS founder and walks them to paying customers in 30 days, without investors.",
-      "version": "1.0.0"
+      "version": "1.1.0"
     }
   ]
 }

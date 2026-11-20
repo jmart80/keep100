@@ -11,6 +11,10 @@ Last confirmed: never
 
 ## Words we use
 ## Words we never use
+## Words we allow
+<!-- Words on Keep100's banned list that are normal in your field, one per line.
+A doula may need "journey". A brewery needs "craft". -->
+
 ## Colors and fonts
 <!-- Hex codes and font names if you have them. -->
 

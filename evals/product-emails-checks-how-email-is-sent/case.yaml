@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: product-emails-checks-how-email-is-sent
+expected_outcome: |
+  Notices the product sends no email yet and offers the by-hand version, pointed at the key action.
+context:
+  scaffold_script: place-workspace.sh

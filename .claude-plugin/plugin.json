@@ -1,10 +1,11 @@
 {
   "name": "keep100",
-  "version": "1.0.0",
+  "displayName": "Keep100",
+  "version": "1.1.0",
   "description": "The solo SaaS founder kit for Claude. Sets Claude up properly for a non-technical founder, then walks them day by day to paying customers in 30 days, without investors.",
   "author": { "name": "jmart80", "url": "https://github.com/jmart80" },
   "homepage": "https://github.com/jmart80/keep100",
   "repository": "https://github.com/jmart80/keep100",
   "license": "MIT",
-  "keywords": ["saas", "founder", "bootstrapping", "marketing", "positioning", "landing-page", "cold-email", "social-media", "seo"]
+  "keywords": ["saas", "founder", "bootstrapping", "marketing", "positioning", "landing-page", "cold-email", "social-media", "seo", "customer-research", "dashboard"]
 }

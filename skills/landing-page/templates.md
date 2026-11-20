@@ -47,7 +47,12 @@ Default: real product UI (screenshot or short looping capture) showing the flags
 
 ### Trust strip
 
-Three horizontally stacked avatar photos, the top one fully visible, with five gold stars to the right. Avatars must be real users (beta testers, design partners, early customers) with permission. Fallback when no real users exist: a compliance badge row (only certifications actually held), or a single specificity-based trust line ("Built with input from 14 practicing doulas").
+No stars and no ratings, ever, unless a real rating is a `[confirmed]` fact with its source. Choose the first of these the founder has earned:
+
+1. Up to three photos of real users (beta testers, design partners, early customers) who gave permission, recorded in `company/facts.md`, with one line saying who they are.
+2. A compliance badge row, only for certifications actually held.
+3. One specific trust line from confirmed facts ("Built with input from 14 practicing doulas" needs those 14 conversations to exist).
+4. Nothing. An empty trust strip is better than an invented one.
 
 ## 2. Problem (Status-Quo Agitation)
 
@@ -106,9 +111,10 @@ Anti-patterns:
 Rules:
 
 - Replace the generic "FAQ" header with the answer to the single most important objection, then list the remaining questions below it
-- Draw questions only from real objections: pricing details, contract terms, implementation timeline, data migration, security and compliance, API access
+- Draw questions only from real objections for the founder's track. B2B: pricing details, contract terms, setup time, moving existing data, security and compliance, integrations. B2C: price and what happens after the trial, cancelling, privacy, whether it works for their situation, what they need to get started, who is behind it
 - Answer each in 1-3 sentences; link to documentation for deep technical answers
-- `{objection}` from `company/positioning.md`ument is the first question
+- `{objection}`, from "Top objection" in `company/positioning.md`, is the first question
+- Answer only from confirmed facts. If the files can't answer a question a buyer would ask, tell the founder and leave it out
 
 ## 6. Final CTA
 

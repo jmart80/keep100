@@ -1,7 +1,7 @@
 # 1. Claude desktop app plugin is the primary install path
 
 Date: 2026-11-19
-Status: Accepted
+Status: Amended by [7](0007-one-plugin-for-app-and-browser.md). The browser can now install plugins, so the zip route described here is gone.
 
 ## Context
 

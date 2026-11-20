@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: positioning-stays-provisional-without-customers
+expected_outcome: |
+  Works from the research and quotes in the workspace, says there are no paying customers so the result is provisional, and takes the components one at a time.
+context:
+  scaffold_script: place-workspace.sh

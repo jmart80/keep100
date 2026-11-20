@@ -1,8 +1,8 @@
-# Email Templates
+# Email templates
 
-Load the slot you're drafting. Slot notes are binding, not suggestions.
+Load the slot you're drafting. Slot notes are binding. Each sentence in a slot is short: the whole email is 50 to 75 words.
 
-## Email 1: Problem recognition (Day 0, new thread)
+## Email 1: Problem recognition (day 0, new thread)
 
 Job: prove you understand their world before mentioning the product.
 
@@ -11,113 +11,128 @@ Subject: {3-4 words, lowercase, internal-memo style, names the problem}
 
 Hi {first_name},
 
-{1-2 sentences naming a specific, measurable problem this prospect's industry or role faces. No preamble, no throat-clearing}
+{1 sentence tying their trigger to a specific problem their role faces. No preamble}
 
-{1 sentence on why this problem is consequential right now}
+{1 sentence on what it costs to leave it. Concrete and specific to their kind of business}
 
-{1 sentence on the cost of inaction. Concrete: a number or outcome where possible}
+{1 sentence on what the founder built for this. Plain words, no feature list}
 
-{1-2 sentences on how the offering addresses this. No feature list, no jargon}
+{The ask: "Worth a quick chat?" or "Is this on your list this quarter?"}
 
-If we could help you see similar {specific outcome}, would it be worth a quick chat?
+{The way out, e.g. "If it's not relevant, say so and I won't write again."}
 
 {Best, or Cheers,}
 {Sender name}
 ```
 
 Notes:
-- Opening line starts with the prospect's world, not the sender's
-- No links, attachments, or offers in this email
-- The cost-of-inaction sentence must be industry-specific, not generic
+- The opening line starts with the prospect's world, not the sender's
+- No links, attachments or offers
+- No outcome is promised that isn't a confirmed fact
+- "I", never "we"
 
-## Email 2: Raise the stakes (Day 3, Re: email 1)
+## Email 2: Raise the stakes (day 3, Re: email 1)
 
-Job: agitate. Show what compounds when the problem goes unaddressed.
+Job: show what compounds when the problem goes unaddressed.
 
 ```
 Subject: Re: {Email 1 subject}
 
 Hi {first_name},
 
-{1 sentence acknowledging no reply. Brief, not apologetic}
+{1 short sentence that picks the thread back up without apology}
 
-{1-2 sentences showing downstream consequences: what's compounding, what's being missed, what it looks like 6 months out without a fix}
+{1-2 sentences on the downstream consequence: what's compounding or being missed}
 
-{1 sentence framing the offering as the intervention that stops the compounding}
+{1 sentence framing what the founder built as what stops it}
 
-{1 yes/no CTA asking for interest, not a meeting}
+{1 yes/no question asking for interest, not a meeting}
 
-{Alternate salutation}
+{Alternate sign-off}
 {Sender name}
 ```
 
 Notes:
-- Do not re-explain the product; the prospect has seen email 1
-- Shift register: email 1 was informational, email 2 creates mild urgency
+- Don't re-explain the product. They have email 1
 - Still no links or attachments
 
-## Email 3: Social proof (Day 7, Re: email 1)
+## Email 3: Proof (day 7, Re: email 1)
 
-Job: show the outcome is real and was achieved for someone like them.
+Job: give them a reason to believe. Pick the version the founder has earned.
+
+**With a confirmed result or named customer:**
 
 ```
 Subject: Re: {Email 1 subject}
 
 Hi {first_name},
 
-{1 sentence callback to the problem. One line only}
+{1 sentence callback to the problem}
 
-{1-2 sentences of specific social proof: a real outcome tied to their industry, with a metric. No full case study}
+{1-2 sentences of specific proof from company/facts.md: a real outcome for someone like them}
 
-{1 sentence optionally referencing a credibility marker from `company/facts.md` (partner status, program, certification, notable customer), only if contextually relevant}
+{1 sentence asking "is this worth exploring?"}
 
-{1 sentence CTA in "is this worth exploring?" framing}
+{Alternate sign-off}
+{Sender name}
+```
 
-{Alternate salutation}
+**With no customers yet:**
+
+```
+Subject: Re: {Email 1 subject}
+
+Hi {first_name},
+
+{1 sentence callback to the problem}
+
+{1-2 sentences on what the founder is hearing from people in their role: a pattern from conversations/ or research, stated as what it is. Or the founder's own confirmed background in this problem}
+
+{1 sentence offering to share what they've learned, or asking how the prospect handles it}
+
+{Alternate sign-off}
 {Sender name}
 ```
 
 Notes:
-- A real metric beats "many of our clients"
-- The only email where the credibility marker may appear
-- If no real proof point exists for this industry, omit the metric rather than fabricate one
+- Never fabricate a metric, a customer or a count of conversations
+- "I've spoken with six clinic owners this month" is allowed only if `conversations/` holds six
+- The no-customers version asks a question that is easy to answer. A reply is the goal
 
-## Email 4: New angle + no-cost offer (Day 12, new subject)
+## Email 4: New angle and a no-cost offer (day 12, new subject)
 
-Job: try a genuinely different angle and lower the barrier with a concrete no-cost offer.
+Job: try a different angle and lower the barrier with something concrete and free.
 
 ```
 Subject: {New 3-4 word lowercase subject, different framing than email 1}
 
 Hi {first_name},
 
-{1 sentence acknowledging prior outreach. One line, no over-apologizing}
+{1 sentence introducing a new angle: a different consequence, person or use case}
 
-{1 sentence introducing a new angle: a different consequence, stakeholder, or use case than previously discussed}
+{1-2 sentences framing the no-cost offer agreed with the founder: specific and small}
 
-{1-2 sentences framing the no-cost offer agreed with the founder: specific and low-commitment}
+{1 question: "would a quick no-cost {offer} be useful?"}
 
-{1 CTA: "would a quick no-cost {offer} be useful?" or similar}
-
-{Alternate salutation}
+{Alternate sign-off}
 {Sender name}
 ```
 
 Notes:
-- The new angle must be meaningfully different, not the same problem reworded
+- The new angle must be different, not the same problem reworded
 - Shorter than email 1
-- The no-cost offer appears here and only here
+- The founder must be able to deliver the offer to everyone who says yes
 
-## Email 5: Breakup (Day 19, new subject)
+## Email 5: Breakup (day 19, new subject)
 
-Job: a definitive, low-pressure close that prompts replies through finality.
+Job: a clear, low-pressure close that makes a reply easy.
 
 ```
-Subject: {New 3-4 word lowercase subject, closing-loop framing, e.g. "closing this out" or "should i close this"}
+Subject: {New 3-4 word lowercase subject, e.g. "closing this out"}
 
 Hi {first_name},
 
-{1 sentence stating this is your last note. Matter-of-fact, not dramatic}
+{1 sentence saying this is the last note. Matter-of-fact}
 
 If you haven't replied, I'm guessing it's one of three things:
 1) Timing is off
@@ -126,11 +141,11 @@ If you haven't replied, I'm guessing it's one of three things:
 
 Just reply with the number. No meeting needed. If it's 1 or 3, I'll follow up when it makes more sense.
 
-{Alternate salutation}
+{Alternate sign-off}
 {Sender name}
 ```
 
 Notes:
-- No product pitch, no meeting ask; the goal is a reply
-- Should feel like a human, not a system closing a ticket
-- The multiple-choice list is the one permitted list in any email body; the finality trigger drives replies
+- No product pitch and no meeting ask. The goal is a reply
+- It should read like a person, not a system closing a ticket
+- The numbered list is the one list allowed in any email body
