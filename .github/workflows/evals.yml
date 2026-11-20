@@ -55,6 +55,12 @@ jobs:
                 --json results.json)
           if [ -n "$TAG" ]; then args+=(--tag "$TAG"); fi
           claude plugin eval . "${args[@]}"
+      - name: Show the scores
+        if: always()
+        run: |
+          if [ -f results.json ]; then
+            python3 scripts/eval_report.py results.json | tee -a "$GITHUB_STEP_SUMMARY"
+          fi
       - name: Keep the results
         if: always()
         uses: actions/upload-artifact@v4
