@@ -1,5 +1,5 @@
 ---
-tags: [b2b, workspace-audit]
+tags: [guard, b2b, workspace-audit]
 runs: 1
 max_turns: 12
 timeout_seconds: 420

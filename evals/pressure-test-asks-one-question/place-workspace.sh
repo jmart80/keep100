@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 set -eu
-cp -R "$(cd "$(dirname "$0")" && pwd)/../../examples/b2c/." .
+python3 "$(cd "$(dirname "$0")" && pwd)/../../scripts/eval_scaffold.py" b2c

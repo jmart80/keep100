@@ -1,5 +1,5 @@
 ---
-tags: [b2b, update-workspace]
+tags: [guard, b2b, update-workspace]
 runs: 1
 max_turns: 10
 timeout_seconds: 420

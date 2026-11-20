@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: "Tag to run (smoke, b2b, b2c, or a skill name). Empty runs everything."
+        description: "Tag to run (smoke, job, guard, b2b, b2c, or a skill name). Empty runs everything."
         required: false
         default: "smoke"
       runs:
@@ -51,7 +51,8 @@ jobs:
           TMPDIR: ${{ runner.temp }}
         run: |
           args=(--trust-plugin --scaffold --allow-tools Write Edit Bash --no-publish
-                --runs "$RUNS" --max-cost-usd "$MAX_COST" --threshold 0.8 --json results.json)
+                --runs "$RUNS" --max-cost-usd "$MAX_COST" --threshold 0.8 --judge-model sonnet
+                --json results.json)
           if [ -n "$TAG" ]; then args+=(--tag "$TAG"); fi
           claude plugin eval . "${args[@]}"
       - name: Keep the results

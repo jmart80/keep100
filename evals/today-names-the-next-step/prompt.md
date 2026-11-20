@@ -1,5 +1,5 @@
 ---
-tags: [smoke, b2b, today]
+tags: [job, smoke, b2b, today]
 runs: 1
 max_turns: 10
 timeout_seconds: 420

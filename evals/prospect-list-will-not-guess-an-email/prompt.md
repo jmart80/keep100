@@ -1,5 +1,5 @@
 ---
-tags: [b2b, prospect-list]
+tags: [guard, b2b, prospect-list]
 runs: 1
 max_turns: 10
 timeout_seconds: 420

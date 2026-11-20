@@ -1,5 +1,5 @@
 ---
-tags: [b2c, content-seo]
+tags: [guard, b2c, content-seo]
 runs: 1
 max_turns: 8
 timeout_seconds: 420

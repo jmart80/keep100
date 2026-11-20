@@ -273,5 +273,56 @@ class RepoTests(unittest.TestCase):
         self.assertEqual(code, 0, out)
 
 
+class EvalScaffoldTest(unittest.TestCase):
+    SCRIPT = ROOT / "scripts" / "eval_scaffold.py"
+
+    def place(self, *args):
+        folder = tempfile.mkdtemp()
+        subprocess.run([sys.executable, str(self.SCRIPT), *args, "--dest", folder], check=True)
+        return Path(folder)
+
+    def test_dates_move_with_today(self):
+        ws = self.place("b2b", "--today", "2027-02-01")
+        self.assertIn("Started: 2027-01-15", (ws / "progress.md").read_text())
+        self.assertTrue((ws / "sales" / "2027-01-26-sequence.md").exists())
+        self.assertFalse(list(ws.rglob("2026-*")))
+
+    def test_same_people_are_due_whatever_the_date(self):
+        ws = self.place("b2b", "--today", "2027-02-01")
+        script = ROOT / "skills" / "prospect-list" / "scripts" / "pipeline.py"
+        out = subprocess.run([sys.executable, str(script), "due", str(ws / "sales" / "pipeline.csv"),
+                              "--today", "2027-02-01"], capture_output=True, text=True).stdout
+        self.assertIn("email 2  Lena Fischer", out)
+        self.assertNotIn("Tom Okafor", out.split("Next steps due")[0])
+
+    def test_messy_variant_seeds_what_the_audit_finds(self):
+        ws = self.place("b2b", "--variant", "messy", "--today", "2026-11-20")
+        script = ROOT / "skills" / "workspace-audit" / "scripts" / "audit.py"
+        out = subprocess.run([sys.executable, str(script), str(ws), "--today", "2026-11-20"],
+                             capture_output=True, text=True).stdout
+        for kind in ("STALE", "DUPLICATE", "UNTAGGED", "UNLOGGED"):
+            self.assertIn(kind, out)
+
+    def test_old_variant_sets_the_kit_version_back(self):
+        ws = self.place("b2b", "--variant", "old")
+        self.assertIn("Kit version: 1.0.0", (ws / "progress.md").read_text())
+
+
+class EvalReportTest(unittest.TestCase):
+    def test_report_counts_runs_passed(self):
+        def run(score):
+            return {"score": score, "costUsd": 0.1, "durationSeconds": 10,
+                    "graders": [{"name": "02-skill-fired", "passed": True}]}
+        result = {"claudeVersion": "test", "startedAt": "2026-11-20T00:00:00Z", "costUsd": 0.4, "cases": [
+            {"name": "dashboard-builds-the-page", "arms": {"with": [run(1), run(1)], "without": [run(0.5), run(1)]}}]}
+        folder = Path(tempfile.mkdtemp())
+        (folder / "r.json").write_text(json.dumps(result))
+        out = subprocess.run([sys.executable, str(ROOT / "scripts" / "eval_report.py"), str(folder / "r.json")],
+                             capture_output=True, text=True).stdout
+        self.assertIn("| Jobs, with Keep100 skills | 2 of 2 | 100% |", out)
+        self.assertIn("| Jobs, same workspace without the skills | 1 of 2 | 75% |", out)
+        self.assertIn("| `dashboard-builds-the-page` |", out)
+
+
 if __name__ == "__main__":
     unittest.main()

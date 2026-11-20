@@ -227,6 +227,12 @@ def check_scripts_on_examples():
             err(f"writing-check/banned.txt is missing the {section} section")
 
 
+def fired_skills(text):
+    """Skills a skill-fired grader accepts, in order. The first is the one the case is about."""
+    found = re.search(r'\)\?(?:\(\?:([a-z0-9|-]+)\)|([a-z0-9-]+))"', text)
+    return (found.group(1) or found.group(2)).split("|") if found else []
+
+
 def check_evals(names):
     folder = ROOT / "evals"
     cases = sorted(p.parent for p in folder.glob("*/prompt.md"))
@@ -252,9 +258,9 @@ def check_evals(names):
             if kind == "llm" and not g_body.strip():
                 err(f"{rel(grader)}: an llm grader needs a rubric")
             if kind == "tool_used":
-                found = re.search(r"\?([a-z0-9-]+)\"'?\s*$", (g_fields or {}).get("input_match", ""))
-                if found and found.group(1) not in names:
-                    err(f"{rel(grader)}: expects the skill {found.group(1)}, which does not exist")
+                for skill in fired_skills((g_fields or {}).get("input_match", "")):
+                    if skill not in names:
+                        err(f"{rel(grader)}: expects the skill {skill}, which does not exist")
         spec = case / "case.yaml"
         if spec.exists():
             text = spec.read_text()
@@ -268,7 +274,7 @@ def check_evals(names):
                 err(f"{where}/case.yaml: scaffold script {script.group(1)} is missing")
     covered = set()
     for grader in folder.glob("*/graders/*.md"):
-        covered |= set(re.findall(r"\?([a-z0-9-]+)\"", grader.read_text()))
+        covered |= set(fired_skills(grader.read_text())[:1])
     for name in names:
         if name not in VENDORED and name not in covered:
             err(f"no eval case checks that the {name} skill fires")

@@ -1,5 +1,5 @@
 ---
-tags: [smoke, b2b, writing-check]
+tags: [job, smoke, b2b, writing-check]
 runs: 1
 max_turns: 12
 timeout_seconds: 420

@@ -1,5 +1,5 @@
 ---
-tags: [b2c, today]
+tags: [guard, b2c, today]
 runs: 1
 max_turns: 10
 timeout_seconds: 420

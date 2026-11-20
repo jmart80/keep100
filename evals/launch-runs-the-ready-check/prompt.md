@@ -1,5 +1,5 @@
 ---
-tags: [b2c, launch]
+tags: [guard, b2c, launch]
 runs: 1
 max_turns: 10
 timeout_seconds: 420
