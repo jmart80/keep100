@@ -6,7 +6,7 @@ What changed in the kit, newest first. For the changes a founder's workspace nee
 
 ### Measured
 
-- All eval cases ran for the first time. Results are in `evals/RESULTS.md`: jobs pass 45 of 45 runs with the skills and 8 of 45 without them.
+- All eval cases ran for the first time. Results are in `evals/RESULTS.md`: jobs pass 48 of 49 runs with the skills and 8 of 49 without them.
 - 33 eval cases, up from 27, split into jobs and guards. Job cases check the files and records a skill leaves behind, not only the reply.
 - `scripts/eval_scaffold.py` keeps the example workspaces "as of today" for every run. `scripts/eval_report.py` writes the results page.
 
