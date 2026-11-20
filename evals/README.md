@@ -20,6 +20,8 @@ claude plugin eval . --scaffold --allow-tools Write Edit Bash --tag cold-email
 claude plugin eval . --scaffold --allow-tools Write Edit Bash --case dashboard-builds-the-page
 ```
 
+On Linux, install `bubblewrap` and `socat` first, and point `TMPDIR` at a folder outside `/tmp` (for example `TMPDIR=$HOME/.cache/keep100-evals`). The runner sandboxes shell commands and refuses to run without those two tools, and its sandbox makes everything under `/tmp` read-only, so a case that writes a file fails there.
+
 `--scaffold` lets each case copy an example workspace into its empty run folder. `--allow-tools` lets the run write files, which the dashboard, audit and brief cases need.
 
 Each case runs once by default. Add `--runs 3` before a release, because one run of a model can pass or fail by chance. Add `--ablation none` to skip the no-plugin comparison and halve the cost.

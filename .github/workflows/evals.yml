@@ -35,12 +35,20 @@ jobs:
           python-version: "3.12"
       - name: Install Claude Code
         run: npm install -g @anthropic-ai/claude-code
+      # The eval runner refuses any run that is granted Bash unless it can sandbox it.
+      - name: Install the sandbox tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y bubblewrap socat
+          sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0 || true
       - name: Run eval cases
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           TAG: ${{ inputs.tag }}
           RUNS: ${{ inputs.runs }}
           MAX_COST: ${{ inputs.max_cost_usd }}
+          # Run folders must sit outside /tmp. The sandbox makes everything under /tmp read-only.
+          TMPDIR: ${{ runner.temp }}
         run: |
           args=(--trust-plugin --scaffold --allow-tools Write Edit Bash --no-publish
                 --runs "$RUNS" --max-cost-usd "$MAX_COST" --threshold 0.8 --json results.json)

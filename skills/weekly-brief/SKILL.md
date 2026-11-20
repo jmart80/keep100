@@ -14,13 +14,14 @@ Read `progress.md`. If you cannot read it (no workspace folder in this session, 
 ## Steps
 
 1. Read `progress.md`, the `Status:` and `Last confirmed:` lines of every file in `company/`, `learnings.md`, and the latest row of Weekly numbers.
+   Count steps the way the dashboard does, so the two never disagree: done is every `- [x]`, and the total is every `- [x]` plus every `- [ ]`. Leave skipped `- [-]` steps out of both numbers.
 2. Write the brief, under 200 words:
 
 ```
 # Week of {date}
 
 ## Where you are
-{Step {done} of {total}. One or two sentences: what's done, what's next.}
+{{done} of {total} steps done. One or two sentences: what's done, what's next.}
 {If Setup or a Foundation step is unticked: name it as the first thing to do this week, with how long it takes.}
 {Last week: {the Weekly numbers row in words, e.g. "42 people reached, 3 replies, 1 call, 0 paid"}. {One clause on which stage to work on.}}
 

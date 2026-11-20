@@ -66,7 +66,7 @@ One line per week. B2B comes from `sales/pipeline.csv`. B2C is counted by hand.
 
 | Week of | Reached | Replies or signups | Calls | Paid |
 |---|---|---|---|---|
-| 2026-11-09 | 18 | 2 | 0 | 0 |
+| 2026-11-09 | 5 | 3 | 0 | 0 |
 
 ## Work log
 
@@ -74,7 +74,7 @@ One line per finished piece of work, newest first, with the file it lives in.
 
 - 2026-11-18 Replied to Priya Nair with two call times (sales/pipeline.csv)
 - 2026-11-14 Five-email sequence written (sales/2026-11-14-sequence.md)
-- 2026-11-13 First prospect list, 31 graded A or B (sales/pipeline.csv)
+- 2026-11-13 First prospect list, 7 graded A or B (sales/pipeline.csv)
 - 2026-11-11 Landing page live at kneecap.example
 - 2026-11-10 Landing page copy, 20 of 20 checks (marketing/2026-11-10-landing-page.md)
 - 2026-11-07 Founding offer recorded (company/pricing.md)
